@@ -1,0 +1,27 @@
+<div>
+  <label for="contactMethod">Select Matrix Type</label><br>
+  <select [(ngModel)]="matrixType" (ngModelChange)="onMatrixChange($event)">
+    <option>3</option>
+    <option>5</option>
+    <option>7</option>
+    <option>9</option>
+  </select>
+  <br><br>
+  <table class="m-t-10">
+    <tr *ngFor="let row of resultMatrix; let i = index">
+      <td *ngFor="let data of row; let j = index">{{ resultMatrix[i][j] }}</td>
+      <td class="sum">{{ sum(resultMatrix[i]) }}</td>
+    </tr>
+    <tr>
+      <td class="sum" *ngFor="let row of resultMatrix; let i = index">
+        {{ calculateColumnSum(i) }}
+      </td>
+    </tr>
+  </table>
+  <br>
+  <span class="sum">Diagonal Sum:  </span>
+  <span class="sum">{{ dSum }}</span>
+  <br>
+  <span class="sum">Inverse Diagonal Sum:  </span>
+  <span class="sum">{{ diagonalSum(false) }}</span>
+</div>
