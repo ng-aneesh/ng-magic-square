@@ -1,3 +1,3 @@
 # ng-magic-square
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/ng-magic-square)
+[View on StackBlitz ⚡️](https://ng-magic-square.stackblitz.io)
